@@ -1,0 +1,138 @@
+.SideManu {
+  height: 100%;
+  width: 500px;
+  max-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(185, 251, 255, 0.2) 0%,
+    rgba(227, 220, 255, 0.2) 100%
+  );
+  backdrop-filter: blur(30px);
+  border-right: 2px white solid;
+  transition: 300ms;
+  .SideManu__logo {
+    padding: 77px 0 0 0;
+    margin-bottom: 25px;
+    display: flex;
+    width: 100%;
+    padding-left: 30px;
+    .menu-active {
+      opacity: 0;
+      margin-left: 10px;
+      transition: 300ms;
+    }
+    & img:nth-child(3) {
+      margin-left: 60px;
+      cursor: pointer;
+    }
+  }
+  nav {
+    width: 100%;
+    > div {
+      height: 54px;
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      > img {
+        margin: 0 10px 0 40px;
+      }
+      p {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 149%;
+        opacity: 0;
+        transition: 100ms;
+        min-width: 200px;
+      }
+    }
+    .this-page {
+      background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(30px);
+      color: #0085ff;
+      text-shadow: 0px 0px 20px #0085ff;
+      cursor: pointer;
+    }
+  }
+  .SideManu__lists {
+    width: 260px;
+    opacity: 0;
+    > div {
+      font-family: "SF Pro Display";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #565555;
+      margin: 20px 0;
+      > a {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+  }
+  .SideManu__tegs {
+    width: 260px;
+    margin-bottom: 50px;
+    opacity: 0;
+    > div {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 100%;
+        color: #ffffff;
+        background: #5241bf;
+        border-radius: 4px;
+        padding: 3px 3px 2px;
+        margin-right: 5px;
+        margin-top: 10px;
+      }
+    }
+  }
+  h5 {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2a2a2a;
+  }
+}
+
+.SideManu__active {
+  max-width: 360px !important;
+  .SideManu__logo {
+    .menu-active {
+      opacity: 1;
+    }
+  }
+  nav {
+    > div {
+      > p {
+        opacity: 1;
+      }
+    }
+  }
+  .SideManu__lists,
+  .SideManu__tegs {
+    opacity: 1;
+    transition: 100px;
+  }
+}
